@@ -6,7 +6,7 @@
 -- 실습 3-1
 create table user2 (
 	uid varchar(10) primary key,
-    name varchar(10),user2
+    name varchar(10),
     birth char(10),
     addr varchar(50)
 );
@@ -62,15 +62,7 @@ insert into user4 values ('a101', '김유신', 'M', 23, '010-1223-0001', '김해
 insert into user4 values ('a102', '신사임당', 'F', 21, NULL, '강릉시');
 select * from user4;
 
--- 실습 3-5
 
-
-
-
--- 실습 3-6
--- 실습 3-7
--- 실습 3-8
--- 실습 3-9
 create table user5(
 	seq		int auto_increment primary key,
 	name	varchar(10) not null,
@@ -78,10 +70,10 @@ create table user5(
     age		int default 1 check(age > 0 and age < 100),
     addr	varchar(20)
 );
--- 실습 3-10
+
 insert into user5 (name, gender, age, addr) values ('김유신', 'M' , 23 , '김해시');
 insert into user5 (name, gender, age, addr) values ('신사임당', 'F' , 21 , '강릉시');
-delete from user5 where seq = 2;
+delete from user5 where seq = 3;
 
 insert into user5 (name, gender, age, addr) values ('허난설헌', 'F', 21, '광주시');
 select * from user5;
